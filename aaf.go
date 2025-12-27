@@ -39,8 +39,8 @@
 // To use the Python bridge:
 //
 //	import (
-//	    "github.com/mrjoshuak/gotio/adapters"
-//	    _ "github.com/mrjoshuak/gotio/adapters" // registers Python bridge
+//	    "github.com/Avalanche-io/gotio/adapters"
+//	    _ "github.com/Avalanche-io/gotio/adapters" // registers Python bridge
 //	)
 //
 //	// Python bridge will automatically handle .aaf files

@@ -6,7 +6,7 @@ package aaf
 import (
 	"io"
 
-	"github.com/mrjoshuak/gotio/opentimelineio"
+	"github.com/Avalanche-io/gotio/opentimelineio"
 )
 
 // Encoder writes OpenTimelineIO objects to AAF (Advanced Authoring Format) files.
@@ -44,7 +44,7 @@ type Encoder struct {
 //
 // The encoder is currently not implemented. Use the Python bridge for AAF support:
 //
-//	import "github.com/mrjoshuak/gotio/adapters"
+//	import "github.com/Avalanche-io/gotio/adapters"
 //	err := adapters.WriteToFile(timeline, "output.aaf")
 func NewEncoder(w io.Writer) *Encoder {
 	return &Encoder{w: w}
@@ -67,7 +67,7 @@ func NewEncoder(w io.Writer) *Encoder {
 // For full AAF writing support, use the Python bridge which leverages the mature
 // otio-aaf-adapter implementation:
 //
-//	import "github.com/mrjoshuak/gotio/adapters"
+//	import "github.com/Avalanche-io/gotio/adapters"
 //	err := adapters.WriteToFile(timeline, "output.aaf")
 //
 // Returns:
