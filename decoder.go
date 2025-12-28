@@ -6,7 +6,7 @@ package aaf
 import (
 	"io"
 
-	"github.com/Avalanche-io/gotio/opentimelineio"
+	"github.com/Avalanche-io/gotio"
 )
 
 // Decoder reads AAF (Advanced Authoring Format) files and converts them to OpenTimelineIO objects.
@@ -70,7 +70,7 @@ func NewDecoder(r io.Reader) *Decoder {
 //   - Extract and deserialize object model
 //   - Map to OTIO Timeline, Track, Clip, etc.
 //   - Preserve metadata, markers, and effects
-func (d *Decoder) Decode() (*opentimelineio.Timeline, error) {
+func (d *Decoder) Decode() (*gotio.Timeline, error) {
 	return nil, ErrNotImplemented
 }
 
@@ -83,6 +83,6 @@ func (d *Decoder) Decode() (*opentimelineio.Timeline, error) {
 //   - "rate": float64 - Override timeline rate
 //
 // This method currently returns ErrNotImplemented. Use the Python bridge for full support.
-func (d *Decoder) DecodeWithOptions(options map[string]interface{}) (opentimelineio.SerializableObject, error) {
+func (d *Decoder) DecodeWithOptions(options map[string]interface{}) (gotio.SerializableObject, error) {
 	return nil, ErrNotImplemented
 }

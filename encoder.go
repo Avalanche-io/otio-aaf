@@ -6,7 +6,7 @@ package aaf
 import (
 	"io"
 
-	"github.com/Avalanche-io/gotio/opentimelineio"
+	"github.com/Avalanche-io/gotio"
 )
 
 // Encoder writes OpenTimelineIO objects to AAF (Advanced Authoring Format) files.
@@ -78,7 +78,7 @@ func NewEncoder(w io.Writer) *Encoder {
 //   - Serialize OTIO objects to AAF object model
 //   - Generate correct object references
 //   - Write binary AAF format
-func (e *Encoder) Encode(t *opentimelineio.Timeline) error {
+func (e *Encoder) Encode(t *gotio.Timeline) error {
 	return ErrNotImplemented
 }
 
@@ -90,6 +90,6 @@ func (e *Encoder) Encode(t *opentimelineio.Timeline) error {
 //   - "clip_name_limit": int - Maximum clip name length
 //
 // This method currently returns ErrNotImplemented. Use the Python bridge for full support.
-func (e *Encoder) EncodeWithOptions(obj opentimelineio.SerializableObject, options map[string]interface{}) error {
+func (e *Encoder) EncodeWithOptions(obj gotio.SerializableObject, options map[string]interface{}) error {
 	return ErrNotImplemented
 }
